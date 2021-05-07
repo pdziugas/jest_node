@@ -21,15 +21,11 @@ function mottoES5(name) {
   return "";
 }
 
-console.log(mottoES5("Martell")); // Unbowed, Unbent, Unbroken
-
 // ES6
 const mottoES6 = (name) => {
   const search = houses.find((house) => house.name === name);
   return search ? search.motto : "";
 };
-
-console.log(mottoES6("Bolton")); // Our Blades Are Sharp
 
 module.exports = {
   mottoES5,

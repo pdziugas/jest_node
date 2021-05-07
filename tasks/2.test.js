@@ -3,7 +3,9 @@ const { sumES5, sumES6 } = require("./2");
 describe("Task #2", () => {
   describe("sum ES5", () => {
     it("should return a sum of 21", () => {
-      const result = sumES5();
+      var listOfNumbersES5 = [1, 2, 3, 4, 5, 6];
+
+      const result = sumES5(listOfNumbersES5);
       const expected = 21;
 
       expect(result).toBe(expected);

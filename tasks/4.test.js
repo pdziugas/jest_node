@@ -1,13 +1,24 @@
-const { removeDuplicates } = require("./4");
+const { removeDuplicates, removeDuplicates2 } = require("./4");
 
-describe("Task #4", () => {
-  describe("removeDuplicates()", () => {
-    it("should remove duplicates in an array", () => {
-      const array = ["one", "two", "three", "one", "four", "five", "six"];
-      const result = removeDuplicates(array);
-      const expected = ["one", "two", "three", "four", "five", "six"];
+describe("Task #4 removeDuplicates()", () => {
+  it("should remove duplicates in an array", () => {
+    const result = removeDuplicates(["one", "two", "three", "one", "four", "five", "six"]);
+    const expected = ["one", "two", "three", "four", "five", "six"];
 
-      expect(result).toStrictEqual(expected);
-    });
+    expect(result).toEqual(expected);
+  });
+
+  it("should remove duplicates in an array", () => {
+    const result = removeDuplicates([10, 10, 10]);
+    const expected = [10];
+
+    expect(result).toEqual(expected);
+  });
+
+  it("should remove duplicates in an array", () => {
+    const result = removeDuplicates2([10, 10, 10]);
+    const expected = [10];
+
+    expect(result).toEqual(expected);
   });
 });

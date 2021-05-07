@@ -1,22 +1,16 @@
 // ES5
 var listOfNumbersES5 = [1, 2, 3, 4, 5, 6];
 
-function sumES5() {
+function sumES5(array) {
   var sum = 0;
-  for (var i = 0; i < listOfNumbersES5.length; i++) {
-    sum = sum + listOfNumbersES5[i];
+  for (var i = 0; i < array.length; i++) {
+    sum = sum + array[i];
   }
   return sum;
 }
 
-console.log(sumES5()); // 21
-
 // ES6
-const listOfNumbersES6 = [1, 2, 3, 4, 5];
-
-const sumES6 = (accumulator, currentVlaue) => accumulator + currentVlaue;
-
-console.log(listOfNumbersES6.reduce(sumES6)); // 15
+const sumES6 = (accumulator, currentValue) => accumulator + currentValue;
 
 module.exports = {
   sumES5,

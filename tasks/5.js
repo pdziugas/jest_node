@@ -1,9 +1,7 @@
-const wordSearch = (string, word) => {
-  let regex = new RegExp(word, "i");
+const wordSearch = (word, string) => {
+  let regex = new RegExp(`\\b${word}\\b`, 'gi');  // g - for all occurrences
   return regex.test(string);
 };
-
-console.log(wordSearch("Hello, my name is Dziugas", "dziugas"));
 
 module.exports = {
   wordSearch,

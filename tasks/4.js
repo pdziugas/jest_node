@@ -1,11 +1,19 @@
-const array = ["one", "two", "three", "one", "four", "five", "six"];
+const removeDuplicates = (array) => {
+  const newArray = [];
+  array.forEach((item) => {
+    if (!newArray.includes(item)) {
+      newArray.push(item);
+    }
+  });
 
-const removeDuplicates = () => {
-  return array.filter((a, b) => array.indexOf(a) === b);
+  return newArray;
 };
 
-console.log(removeDuplicates());
+const removeDuplicates2 = (array) => {
+  return [...new Set(array)];
+}
 
 module.exports = {
   removeDuplicates,
+  removeDuplicates2,
 };

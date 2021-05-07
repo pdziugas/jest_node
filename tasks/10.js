@@ -1,5 +1,4 @@
-var CalculatorES5 = function () {
-  var result = 0;
+var CalculatorES5 = function (result) {
   this.add = function (x) {
     result = result + x;
 
@@ -60,7 +59,7 @@ class CalculatorES6 {
   }
 }
 
-let calculatorES6 = new CalculatorES6(0);
+let calculatorES6 = new CalculatorES6();
 let amount = calculatorES6.add(5).multiply(2).add(20).divide(3).value;
 console.log(amount, "amount"); // 10
 

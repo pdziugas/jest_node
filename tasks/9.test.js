@@ -8,4 +8,12 @@ describe("Task #9 sumNestedArray()", () => {
 
     expect(result).toBe(expected);
   });
+  
+  it("should return a sum of 1179.4", () => {
+    let nestedArray = [660, 41.2, [4, 8], 3, [6, 5, [452.2]]];
+    const result = sumNestedArray(nestedArray);
+    const expected = 1179.4;
+
+    expect(result).toBe(expected);
+  });
 });

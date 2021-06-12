@@ -50,6 +50,16 @@ Example:
 Create a function which takes an array and returns an array with all duplicates
 removed.
 
+```js
+// apparently there is an even shorter way to do this that I found in Karolis repo
+
+// basically object Set stores unique values. 
+// Set takes an iterable object and spread operator sets back into array
+const removeDuplicates = (array) => {
+  return [...new Set(array)];
+}
+```
+
 ---
 
 ## Task 5
